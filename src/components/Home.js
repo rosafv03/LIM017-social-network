@@ -1,3 +1,5 @@
+/* eslint-disable indent */
+/* eslint-disable no-restricted-globals */
 // eslint-disable-next-line import/no-cycle
 import { onNavigate } from '../lib/application/controller.js';
 // eslint-disable-next-line import/no-cycle
@@ -31,9 +33,11 @@ export const Home = () => {
             <form id='form-post-publication' class='form' target="_blank">
             
               <p>Cuentanos tu experiencia viajando:</p>
-              <p><textarea  class="comment-post" id="comment-post" spellcheck="true" placeholder="Escribe aquí ..."></textarea></p>
+              <p><textarea  class="comment-post" id="comment-post" spellcheck="true" placeholder="Cuentanos ..."></textarea></p>
+              <div id='btn-coment'>
+              <input type="reset" id='deleteCamp' value="Borrar campo">
               <input type="button" id='publish' value="Publicar">
-              <input type="reset" id='deleteCamp' value="Borrar todo">
+              </div>
             </form>
             <section id="showPost">
             </section>
@@ -57,20 +61,27 @@ export const Home = () => {
       console.log(doc.data());
       // doc.data transforma los datos de un objeto de firebase a un objeto de javascript
       html += `
+            
             <div class='post-separacion'>
-            <p id='nameUserPost'>${dataPost.author} </p>
-            <p id='nameUserPost'>${dataPost.date} </p>
-            <p>${dataPost.text} </p>
-            <div>
-            <button data-id="${doc.id}" class='btn-Delete'${dataPost.author === localStorage.getItem('userEmail') ? '' : 'disabled'}>Eliminar</button>
-            <button data-id="${doc.id}" class='btn-edit'${dataPost.author === localStorage.getItem('userEmail') ? '' : 'disabled'}>Editar</button>
+            <div id='btnModificacion'>
+            <button data-id="${doc.id}" class='btn-Delete'${dataPost.author === localStorage.getItem('userEmail') ? '' : 'disabled'}></button>
+            <button data-id="${doc.id}" class='btn-edit'${dataPost.author === localStorage.getItem('userEmail') ? '' : 'disabled'}></button>
             </div>
+            <div class="boxPerfil">
+                <img class='perfilPhoto' id='perfilPhoto' src="${dataPost.photo}" alt=""><div class='nameUser'><strong>${dataPost.nameUser} </strong></div>
+                <div id='nameUserPost'>Correo: ${dataPost.author}</div>
+                </div>
+            <div class='infoDate'>
+             <div> Fecha: ${dataPost.date}</div>
+            
+            </div>
+            <div class='publicationPost'>${dataPost.text} </div>
             </div>
             </div>
             `;
     });
     postContainer.innerHTML = html;
-/* ---------------------------------BOTON ELIMINAR POST ----------------------------------------- */
+    /* -----------------------BOTON ELIMINAR POST ----------------------------------------- */
     const btnDelete = postContainer.querySelectorAll('.btn-Delete'); // Lista de botones eliminar
     btnDelete.forEach((btn) => {
       btn.addEventListener('click', async ({ target: { dataset } }) => {
@@ -81,10 +92,11 @@ export const Home = () => {
           }
         } catch (error) {
           console.log(error);
+          console.log(error);
         }
       });
     });
-/* -----------------------------------------BOTON EDITAR----------------------------------------- */
+    /* -------------------------------BOTON EDITAR----------------------------------------- */
     const btnsEdit = postContainer.querySelectorAll('.btn-edit');
     btnsEdit.forEach((btn) => {
       btn.addEventListener('click', async (e) => {
@@ -108,7 +120,6 @@ export const Home = () => {
     console.log(postBox);
     /* savePost.reset(); */
   });
-
 
   /* --------BOTONES BARRA DE NAVEGACIÓN ---------*/
   viewHomePage.querySelector('#buttonNavStart').addEventListener('click', () => {

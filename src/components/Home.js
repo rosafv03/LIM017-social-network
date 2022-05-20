@@ -5,7 +5,7 @@ import { onNavigate } from '../lib/application/controller.js';
 // eslint-disable-next-line import/no-cycle
 import { signOff } from '../lib/application/authFirebase.js';
 import {
-  postCollection, onGetPosts, deletePost, getPostPublication,
+  postCollection, onGetPosts, deletePost, getPostPublication, fuctionEditPost,
 } from '../lib/application/dataFirestore.js';
 
 export const Home = () => {
@@ -69,13 +69,13 @@ export const Home = () => {
             </div>
             <div class="boxPerfil">
                 <img class='perfilPhoto' id='perfilPhoto' src="${dataPost.photo}" alt=""><div class='nameUser'><strong>${dataPost.nameUser} </strong></div>
-                <div id='nameUserPost'>Correo: ${dataPost.author}</div>
+                <div id='nameUserPost'>(${dataPost.author})</div>
                 </div>
             <div class='infoDate'>
              <div> Fecha: ${dataPost.date}</div>
-            
             </div>
-            <div class='publicationPost'>${dataPost.text} </div>
+            <textarea readonly id='textarea-${doc.id}' class='publicationPost'>${dataPost.text} </textarea>
+            <button style='display:none'   id='btn-${doc.id}'> Actualizar </button>
             </div>
             </div>
             `;
@@ -96,17 +96,21 @@ export const Home = () => {
         }
       });
     });
-    /* -------------------------------BOTON EDITAR----------------------------------------- */
+    /* -------------------------------BOTON EDITAR ----------------------------------------- */
     const btnsEdit = postContainer.querySelectorAll('.btn-edit');
     btnsEdit.forEach((btn) => {
       btn.addEventListener('click', async (e) => {
         const doc = await getPostPublication(e.target.dataset.id);
-        const dataOfPost = doc.data();
-        const postComment = viewHomePage.querySelector('#comment-post');
-        postComment.value = dataOfPost.text;
-        console.log(doc.data());
-        console.log(dataOfPost.text);
-      });
+        const editPost = document.querySelector(`#textarea-${doc.id}`);
+        editPost.removeAttribute('readonly');
+        const btnRefresh = document.querySelector(`#btn-${doc.id}`);
+        btnRefresh.style = 'display:block';
+        btnRefresh.addEventListener('click', () => {
+          editPost.setAttribute('readonly', '');
+          fuctionEditPost(doc.id, { text: editPost.value });
+          btnRefresh.style = 'display:none';
+        });
+    });
     });
   });
 

@@ -11,6 +11,7 @@ import {
   query,
   orderBy,
   getDoc,
+  updateDoc,
 } from './init.js'; // agregado
 // eslint-disable-next-line import/no-cycle
 import { auth } from './authFirebase.js';
@@ -52,3 +53,4 @@ export const getPostPublication = (id) => getDoc(doc(db, 'posts', id));
 export const onGetPosts = (callback) => onSnapshot(query(collection(db, 'posts'), orderBy('date', 'desc')), callback);
 
 // const q = query(citiesRef, orderBy("name"), limit(3));
+export const fuctionEditPost = (id, idPost) => updateDoc(doc(db, 'posts', id), idPost);

@@ -20,6 +20,27 @@ a {
   margin-top: 10%;
   /* background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%); */
 }
+.refresh{
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+  text-align: center;
+  font-family: " EB Garamond";
+  font-size: 20px;
+  padding: 16px 32px;
+  transition-duration: 0.4s;
+  margin: 5px;
+  background-color: #00a4e0;
+}
+.refresh{
+  background-color: rgb(91, 181, 255);
+  color: black;
+  border: 2px solid #404140;
+}
+.log-act{
+  width: 22px;
+  margin: 1px;
+}
 .boxPerfil {
   border-radius: 50%;
   display: flex;
@@ -53,7 +74,7 @@ display:flex ;
 }*/
 .btn-Delete {
   background: #92c7eb;
-  background-image: url('http://res.freestockphotos.biz/pictures/15/15107-illustration-of-a-red-close-button-pv.png');
+  background-image: url('https://images.emojiterra.com/mozilla/512px/1f5d1.png');
   background-size: cover;
   background-position: center;
   display: inline-block;

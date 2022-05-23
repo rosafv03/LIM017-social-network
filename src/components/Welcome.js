@@ -7,7 +7,7 @@ export const Welcome = () => {
 
   <section class='containerWelcome'>
   <div class='text-container'>
-  <div id='videoCuy'>
+  <div class='videoCuy'>
     <video autoplay muted loop id='video-phone'>
     <source src='img/cuy-video.mp4' type='video/mp4'>
     </video>

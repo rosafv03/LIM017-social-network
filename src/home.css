@@ -21,6 +21,26 @@ a {
   margin-top: 7%;
   /* background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%); */
 }
+.refresh{
+  border-radius: 10px;
+    color: black;
+    cursor: pointer;
+    text-align: center;
+    font-family: " EB Garamond";
+    font-size: 20px;
+    padding: 10px 10px;
+    transition-duration: 0.4s;
+    /* margin-top: 50px; */
+    margin: auto;
+    width: 80px;
+    border-radius: 40% 40%;
+    border: 2px solid #c7c7c7;
+    background-color: rgb(45 195 102);
+}
+.log-act{
+  width: 22px;
+  margin: 1px;
+}
 .boxPerfil {
   font-size: 115%;
   border-radius: 50%;
@@ -55,7 +75,7 @@ display:flex ;
 }*/
 .btn-Delete {
   background: #92c7eb;
-  background-image: url('http://res.freestockphotos.biz/pictures/15/15107-illustration-of-a-red-close-button-pv.png');
+  background-image: url('https://images.emojiterra.com/mozilla/512px/1f5d1.png');
   background-size: cover;
   background-position: center;
   display: inline-block;
@@ -183,11 +203,13 @@ comment-post :empty::before{
 
 .publicationPost{
 background-color: white;
+ resize: none; /*para quitar las lineas de textarea */
 width: 100%;
 height:50%;
 padding: 3% 3%  1%;
 border-radius: 25px 5px 25px 5px;
 font-size: 135%;
+margin: 5px;
 }
 
 #post-Publish{
@@ -209,8 +231,9 @@ color: #000000;
 /* font-size: 18px; 
 font-weight: 400; 
 text-align: center;  */
+margin: 8px;
 background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
-margin: 3% 8% 0% 8%; 
+/* margin: 3% 8% 0% 8%;  */
 overflow: hidden; 
 padding: 20px; 
 border-radius: 25px 5px 25px 5px;; 

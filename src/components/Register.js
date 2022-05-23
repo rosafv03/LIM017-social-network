@@ -15,10 +15,10 @@ export const Register = () => {
     <p class=text-Register>Registro</p>
     <form>
     <label for='nameUser'>Nombre de usuario
-    <input type='text' id='createName' placeholder ='Ejm: Luis Quispe' name ='nameUser'>
+    <input type='text' id='createName' placeholder ='Ejm: usuario' name ='nameUser'>
     </label>
     <label for='inputEmail'>Email
-    <input type='text' id='createEmail' placeholder ='LuisQuispe@example.com' name ='nameEmail'>
+    <input type='text' id='createEmail' placeholder ='usuario@example.com' name ='nameEmail'>
     </label>
     <p id='messageEmail'></p>
     <label for='namePassword'>Contraseña

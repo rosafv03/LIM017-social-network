@@ -12,7 +12,7 @@ body {
 
     background-color:rgb(255, 255, 255);
    
-    /*background-image: url("/img/cuzco.png");*/
+    background-image: url("/img/home.png");
 
     /* font-family: inherit; */
     /* display: flex;
@@ -113,6 +113,11 @@ body {
 
     }
 }*/
+
+
+.videoCuy{
+background-color: #59AFCA;
+}
 .viewContainer{
     background-color: rgb(255, 255, 255);
     /* background: linear-gradient(hsl(0, 0%, 100%), #b9ebd8); */
@@ -231,15 +236,15 @@ h1{
     justify-content:center;
     margin-left: 0px;
 }
-.text-container-{
-    color: white;
+#text-container-{
+    background-color: rgb(20, 122, 217);
 }
-.conatinerWelcome{
+/* .containerWelcome{
     background-color: white;
     width: 100%;
     height: 100%;
     margin-left: 0px;
-}
+} */
 #video-phone{
     width: 380px;
     margin-left :10px;

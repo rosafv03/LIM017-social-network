@@ -11,10 +11,10 @@ export const Login = () => {
     <img class='img-responsive' src='img/cuyLog.png'>
     <p class=text-Register>Login</p>
     <label for='nameEmail'>Email
-    <input type='text' id='loginEmail' placeholder ='Ingresar correo' name ='nameEmail' required>
+    <input type='text' id='loginEmail' placeholder ='Ejm:usuario@example.com' name ='nameEmail' required>
     </label>
     <label for='namePassword'>Contraseña
-    <input type= 'password' id='loginPassword' placeholder ='Ingresar contraseña' name ='namePassword' required>
+    <input type= 'password' id='loginPassword' placeholder ='Mayor a 6 caracteres' name ='namePassword' required>
     <p id='messageEmail'></p>
     <p id='messagePassword'></p>
     <p id='errorCodeMessage'></p>

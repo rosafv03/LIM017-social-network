@@ -32,8 +32,8 @@ export const Home = () => {
             </div>
             <form id='form-post-publication' class='form' target="_blank">
             
-              <p>Cuentanos tu experiencia viajando:</p>
-              <p><textarea  class="comment-post" id="comment-post" spellcheck="true" placeholder="Cuentanos ..."></textarea></p>
+              
+              <p><textarea  class="comment-post" id="comment-post" spellcheck="true" placeholder="Cuéntanos tu experiencia viajando..."></textarea></p>
               <div id='btn-coment'>
               <input type="reset" id='deleteCamp' value="Borrar campo">
               <input type="button" id='publish' value="Publicar">

@@ -5,18 +5,18 @@ import { onNavigate } from '../lib/application/controller.js';
 export const Welcome = () => {
   const welcome = `
 
-  <section class='conatinerWelcome'>
-  <section class='text-container-'>
-  <div>
-  <video autoplay muted loop id='video-phone'>
-  <source src='img/cuy-video.mp4' type='video/mp4'>
-  </video>
+  <section class='containerWelcome'>
+  <div class='text-container'>
+  <div id='videoCuy'>
+    <video autoplay muted loop id='video-phone'>
+    <source src='img/cuy-video.mp4' type='video/mp4'>
+    </video>
   </div>
   <div id='buttomWelcome'>
-  <button id='buttonRegister'> Registrate</button>
-  <button id='buttonLogin'> Inicia sesión </button>
+    <button id='buttonRegister'> Regístrate</button>
+    <button id='buttonLogin'> Inicia sesión </button>
   </div>
-    </section>
+    </div>
 
     </section>
     `;

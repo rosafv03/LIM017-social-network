@@ -75,7 +75,7 @@ export const Home = () => {
              <div> Fecha: ${dataPost.date}</div>
             </div>
             <textarea readonly id='textarea-${doc.id}' class='publicationPost'>${dataPost.text} </textarea>
-            <button style='display:none' class='refresh'  id='btn-${doc.id}' > <img class='log-act' src='img/refresh.png'>  Actualizar </button>
+            <button style='display:none' class='refresh'  id='btn-${doc.id}' ><img class='log-act' src='img/refresh.png'></button>
             </div>
             </div>
             `;

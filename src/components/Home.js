@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 /* eslint-disable indent */
 /* eslint-disable no-restricted-globals */
 // eslint-disable-next-line import/no-cycle
@@ -11,20 +12,16 @@ import {
 export const Home = () => {
   const homePage = `
       <section class="header">
-        <div>
+      <div>
             <div><img class="logo" src="img/cuyMap.png" alt="" srcset="" ></div>
             <div class='centerTitle'>
             <a href="" class="titleCuyViajero"> <strong>Cuy Viajero</strong></a>
             </div>
-            <input class="menu-btn" type="checkbox" id="menu-btn" />
-            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-              <ul class="menu">
-                <li><a type="button" class='buttonNav' id='buttonNavStart'>Inicio</a></li>
-                <li><a type="button" class='buttonNav' id='buttonNavProfile'>Perfil</a></li>
-                <li><a type="button" class='buttonNav' id='singOutBttn'>Cerrar sesión</a></li>
-              </ul>
-          </div>
-      </section>
+            <div>
+            <button class='buttonNav' id='singOutBttn'><img class='out' src='img/salida.png'></button>
+            </div>
+            </div>
+            </section>
         <div id='box-comment'>
           <section class='abc'>
             <div class="photoProfile">
@@ -68,7 +65,7 @@ export const Home = () => {
             <button data-id="${doc.id}" class='btn-edit'${dataPost.author === localStorage.getItem('userEmail') ? '' : 'disabled'}></button>
             </div>
             <div class="boxPerfil">
-                <img class='perfilPhoto' id='perfilPhoto' src="${dataPost.photo}" alt=""><div class='nameUser'><strong>${dataPost.nameUser} </strong></div>
+                <img class='perfilPhoto' id='perfilPhoto' alt='Foto'src="${dataPost.photo}" alt=""><div class='nameUser'><strong>${dataPost.nameUser} </strong></div>
                 <div id='nameUserPost'>(${dataPost.author})</div>
                 </div>
             <div class='infoDate'>
@@ -119,23 +116,30 @@ export const Home = () => {
   savePost.addEventListener('click', (e) => {
     e.preventDefault();
     const postBox = viewHomePage.querySelector('#comment-post').value; // Valor del post
-    postCollection(postBox);
+    if (postBox === '') {
+      alert('Debes ingresar u texto antes de publicar');
+    } else postCollection(postBox);
     viewHomePage.querySelector('#comment-post').value = '';
     console.log(postBox);
     /* savePost.reset(); */
   });
 
   /* --------BOTONES BARRA DE NAVEGACIÓN ---------*/
-  viewHomePage.querySelector('#buttonNavStart').addEventListener('click', () => {
-    onNavigate('/home');
-  });
-  viewHomePage.querySelector('#buttonNavProfile').addEventListener('click', () => {
-    onNavigate('/profile');
-  });
+  // viewHomePage.querySelector('#buttonNavStart').addEventListener('click', () => {
+  //   onNavigate('/home');
+  // });
+  // viewHomePage.querySelector('#buttonNavProfile').addEventListener('click', () => {
+  //   onNavigate('/profile');
+  // });
 
   viewHomePage.querySelector('#singOutBttn').addEventListener('click', () => {
     signOff()
-      .then(() => onNavigate('/'))
+      .then(() => {
+       const confirmsignOff = confirm('Estás seguro de cerrar sesión?');
+      if (confirmsignOff === true) {
+         onNavigate('/');
+      }
+  })
       .catch((error) => {
         console.log('No pudo cerrar sesión', error);
       });

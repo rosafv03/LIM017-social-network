@@ -75,19 +75,17 @@ DEFINICIÓN DE TERMINADO: 	El usuario es capaz de editar de manera fácil su pos
  
  ## 3. Diseño de la Interfaz de Usuario - Responsive Design
 •	Prototipo baja fidelidad:
-![Pro-00](https://github.com/GabrielaTornel/LIM017-social-network/blob/main/src/img/pro%2000.png?raw=true)
-![Pro-01](https://github.com/GabrielaTornel/LIM017-social-network/blob/main/src/img/pro01.png?raw=true)
-![Pro-02](https://github.com/GabrielaTornel/LIM017-social-network/blob/main/src/img/pro2.png?raw=true)
+![Pro-00](https://github.com/GabrielaTornel/LIM017-social-network/blob/main/src/img/ProtB1.png?raw=true)
+![Pro-01](https://github.com/GabrielaTornel/LIM017-social-network/blob/main/src/img/ProtB2.png?raw=true)
 •	Prototipo alta fidelidad:
-![ProFin00](https://github.com/GabrielaTornel/LIM017-social-network/blob/main/src/img/profin0.png?raw=true)
-![ProFin01](https://github.com/GabrielaTornel/LIM017-social-network/blob/main/src/img/profin1.png?raw=true)
-![ProFin02](https://github.com/GabrielaTornel/LIM017-social-network/blob/main/src/img/profin2.png?raw=true)
-![ProFin03](https://github.com/GabrielaTornel/LIM017-social-network/blob/main/src/img/profin3.png?raw=true)
-![ProFin04](hhttps://github.com/GabrielaTornel/LIM017-social-network/blob/main/src/img/profin4.png?raw=true)
+![ProFin00](https://github.com/GabrielaTornel/LIM017-social-network/blob/main/src/img/ProAlt00.png?raw=true)
+![ProFin01](https://github.com/GabrielaTornel/LIM017-social-network/blob/main/src/img/ProAlt01.png?raw=true)
+![ProFin02](https://github.com/GabrielaTornel/LIM017-social-network/blob/main/src/img/ProAlt02.png?raw=true)
 
 Resultado final:
 * Vista Mobile
-   ![mobile] 
+   ![mobile00](https://github.com/GabrielaTornel/LIM017-social-network/blob/main/src/img/VistaMobile.png?raw=true)
+   ![mobile01](https://github.com/GabrielaTornel/LIM017-social-network/blob/main/src/img/VistaMobile3.png?raw=true)
 * Vista Desktop
 ![desktop]
     

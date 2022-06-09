@@ -52,18 +52,21 @@ export const Home = () => {
 
   onGetPosts((querySnapshot) => {
     let html = '';
+
     querySnapshot.forEach((doc) => {
       const dataPost = doc.data();
+
+      const edit = (localStorage.userEmail === dataPost.author) ? ` <div id='btnModificacion'>
+      <button data-id="${doc.id}" class='btn-Delete'${dataPost.author === localStorage.getItem('userEmail') ? '' : 'disabled'}></button>
+      <button data-id="${doc.id}" class='btn-edit'${dataPost.author === localStorage.getItem('userEmail') ? '' : 'disabled'}></button>
+      </div>` : '';
       console.log(doc.id);
       console.log(doc.data());
       // doc.data transforma los datos de un objeto de firebase a un objeto de javascript
       html += `
             
             <div class='post-separacion'>
-            <div id='btnModificacion'>
-            <button data-id="${doc.id}" class='btn-Delete'${dataPost.author === localStorage.getItem('userEmail') ? '' : 'disabled'}></button>
-            <button data-id="${doc.id}" class='btn-edit'${dataPost.author === localStorage.getItem('userEmail') ? '' : 'disabled'}></button>
-            </div>
+            ${edit}
             <div class="boxPerfil">
                 <img class='perfilPhoto' id='perfilPhoto' alt='Foto'src="${dataPost.photo}" alt=""><div class='nameUser'><strong>${dataPost.nameUser} </strong></div>
                 <div id='nameUserPost'>(${dataPost.author})</div>

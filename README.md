@@ -1,4 +1,179 @@
-# Creando una Red Social
+# CUY VIAJERO – Red Social de Viajes
+
+## Índice
+
+* [1. Descripción](#1-Descripción)
+* [2. Historias de usuario](#2-historias-de-usuario)
+* [3. Diseño de la Interfaz de Usuario](#3-diseño-de-la-interfaz-de-usuario)
+* [4. Criterios de aceptación mínimos del proyecto](#4-criterios-de-aceptación-mínimos-del-proyecto)
+
+## 1. Descripción
+
+Las redes sociales sitios facilitan la comunicación entre las personas, el intercambio de información y permiten conocer gente nueva, ampliando aún más la  red de contactos con intereses afines. 'Cuy Viajero' es una red social con temática de Viajes, donde buscamos que los usuarios puedan registrar sus experiencias, recomendaciones o consultas sobre viajes.
+
+<!-- ## 4. Definición del producto
+
+* Los principales usuarios para ésta red Social, según una encuesta realizada a 50 personas, son:
+-
+-
+-
+-
+
+
+* Ésta red social resuelve el problemas de la mayoría de viajeros que antes de programar un viaje desean, recibir recomendaciones de lugar a adónde visitar, compartir su experiencia y opinión sobre algunos destinos, ésta red social le permitirá interactuar con más usuarios con similares intereses y así crear una comunidad de apoyo y consulta.
+ -->
+
+
+## 2. Historias de usuario
+|  | **HISTORIA DE USUARIO 01**|
+| ---------- |----------- |
+|NOMBRE:  |  Crear cuenta de usuario|
+|DESCRIPCIÓN: | Como usuario nuevo Quiero poder crear una cuenta con nombre de usuario, email y password para poder ingresar a la red social|  
+|CRITERIOS DE ACEPTACIÓN: |  Dado que el usuario quiere crearse una cuenta cuando esté interesado en compartir información en la red social, y conocer sus beneficios entonces se creará un apartado que permita al usuario llenar sus datos de username, email, password o registrarse con su cuenta gmail. Y luego estos datos serán guardados.  |
+|DEFINICIÓN DE TERMINADO: |  El usuario ingresa satisfactoriamente sus datos de registro, el cual se usará para el ingreso a la vista de publicaciones |
+
+|  |**HISTORIA DE USUARIO 02**  |
+| ------------|----------- |
+|**NOMBRE:**  |  Login con usuario y contraseña|
+| **DESCRIPCIÓN:** |  Como usuario registrado quiero poder ingresar con mi correo y contraseña para poder acceder a la aplicación |
+| **CRITERIOS DE ACEPTACIÓN:** |   Dado que el usuario quiere ingresar a la aplicación con su usuario y contraseña, ingresará a la vista “login” e ingresará el usuario y contraseña con el que se registró, previamente debió darle click al enlace de validación enviado al correo con el que se registró |
+| DEFINICIÓN DE TERMINADO: | El usuario logra acceder a la aplicación con su usuario y contraseña registrados.   |
+
+
+|  |  **HISTORIA DE USUARIO 03**|
+| ----- |----- |
+| **NOMBRE:**  |  Login con Google. |
+| **DESCRIPCIÓN:** | Como usuario que cuenta con correo Gmail, quiero poder acceder a la aplicación de manera más fácil con mi correo Gmail. |
+| **CRITERIOS DE ACEPTACIÓN:** | Dado que el usuario no desea crear una cuenta con usuario y contraseña para ingresar a la app, la aplicación cuenta con un botón de iniciar con Google el cual le permitirá acceder haciendo click y eligiendo el correo Gmail con el que desea ingresar. |
+| **DEFINICIÓN DE TERMINADO:** | El usuario logra ingresar accediendo al botón de iniciar sesión con Google, luego de otorgar permisos, logrará acceder a la aplicación. |
+
+
+|  |  **HISTORIA DE USUARIO 04**|
+| ----------- | ------------ |
+| **NOMBRE:**  |  Crear publicación  |
+| **DESCRIPCIÓN:** | Como usuario registrado quiero poder crear una publicación |
+| **CRITERIOS DE ACEPTACIÓN:** | Dado que el usuario ha iniciado sesión y quiere compartir una publicación, podrá redactar su publicación en un área de texto disponible para editar. |
+| **DEFINICIÓN DE TERMINADO:** | El usuario es capaz de crear un post con la información que desea compartir.   |
+
+ 
+
+ 
+|   | **HISTORIA DE USUARIO 05** | 
+| -------------|-------------|
+| **NOMBRE:**  | Visualizar publicación |
+| **DESCRIPCIÓN:** | Como usuario autor quiero: poder visualizar mi post después de haber publicado un post y de haber recargado la página para corregir o incorporar nueva información |
+| **CRITERIOS DE ACEPTACIÓN:** | Dado que el usuario quiere poder visualizar su post cuando termine de publicarlo entonces podrá visualizarlo en la parte inferior donde se listan los posts visualizarlo y poder editarlo.  |
+| **DEFINICIÓN DE TERMINADO:** | El usuario es capaz de visualizar de manera eficiente su post publicado. |
+
+
+|  | **HISTORIA DE USUARIO 06** |
+| --------------|--------- |
+| **NOMBRE:**  |  Eliminar publicación  |
+| **DESCRIPCIÓN:** | Como usuario autor quiero eliminar las publicaciones que me pertenecen.  |
+| **CRITERIOS DE ACEPTACIÓN:** | Dado que el usuario autor, ha realizado alguna publicación previamente, se le habilitará el botón eliminar en el post publicado, al darle click, se mostrará una alerta consultando si realmente quiere eliminar el post, si el usuario autor confirma, se procederá a eliminar el post de su autoría. |
+| **DEFINICIÓN DE TERMINADO:** |  El usuario es capaz de eliminar los post de su autoría. |
+
+|   |  **HISTORIA DE USUARIO 07** |
+| ------------- |---------- |
+| **NOMBRE:**  | Editar publicación |
+| **DESCRIPCIÓN:** | Como usuario autor quiero poder editar y guardar el post editado para corregir o incorporar nueva información. |
+| **CRITERIOS DE ACEPTACIÓN:** | Dado que el usuario quiere editar su post cuando quiera corregir alguna información entonces se habilitará un botón de editar en los posts de su autoría, una vez editado el post, se habilitará un botón de actualizar para poder guardar el post con los cambios realizados. |
+| **DEFINICIÓN DE TERMINADO:** | El usuario es capaz de editar de manera fácil su post publicado. |
+
+
+ ## 3. Diseño de la Interfaz de Usuario - Responsive Design
+•	Prototipo baja fidelidad:
+![Pro-00](https://github.com/GabrielaTornel/LIM017-social-network/blob/main/src/img/ProtB1.png?raw=true)
+![Pro-01](https://github.com/GabrielaTornel/LIM017-social-network/blob/main/src/img/ProtB2.png?raw=true)
+•	Prototipo alta fidelidad:
+![ProFin00](https://github.com/GabrielaTornel/LIM017-social-network/blob/main/src/img/ProAlt00.png?raw=true)
+![ProFin01](https://github.com/GabrielaTornel/LIM017-social-network/blob/main/src/img/ProAlt01.png?raw=true)
+![ProFin02](https://github.com/GabrielaTornel/LIM017-social-network/blob/main/src/img/ProAlt02.png?raw=true)
+
+Resultado final:
+* Vista Mobile
+   ![mobile00](https://github.com/GabrielaTornel/LIM017-social-network/blob/main/src/img/VistaMobile.png?raw=true)
+   ![mobile01](https://github.com/GabrielaTornel/LIM017-social-network/blob/main/src/img/VistaMobile3.png?raw=true)
+
+## 4. Criterios de aceptación mínimos del proyecto
+
+### 4.1 Consideraciones del comportamiento de la interfaz de usuario (UI)
+
+Estas consideraciones te ayudarán a escribir las Definiciones de Terminado de
+tus H.U.:
+
+#### Creación de cuenta de usuario e inicio de sesión
+
+* _Login_ con Firebase:
+  - [✔️] Para el _login_ y las publicaciones en el muro puedes utilizar [Firebase](https://firebase.google.com/products/database/)
+  - [✔️] Creación de cuenta de acceso y autenticación con cuenta de correo y
+    contraseña, y también con una cuenta de Google.
+* Validaciones:
+  - [✔️] Solamente se permite el acceso a usuarios con cuentas válidas.
+  - [✔️] No pueden haber usuarios repetidos.
+  - [✔️] La cuenta de usuario debe ser un correo electrónico válido.
+  - [✔️] Lo que se escriba en el campo (_input_) de contraseña debe ser secreto.
+* Comportamiento:
+  - [✔️] Al enviarse el formulario de registro o inicio de sesión, debe validarse.
+  - [✔️]  Si hay errores, se deben mostrar mensajes descriptivos para ayudar al
+  usuario a corregirlos.
+
+#### Muro/timeline
+
+* Validaciones:
+  - [✔️]Al publicar, se debe validar que exista contenido en el _input_.
+* Comportamiento:
+  - [✔️]Al recargar la aplicación, se debe verificar si el usuario está _logueado_
+    antes de mostrar contenido.
+  - [✔️]Poder publicar un _post_.
+  - [✔️]Poder eliminar un post específico.
+  - Pedir confirmación antes de eliminar un _post_.
+  - [✔️]Al dar _click_ para editar un _post_, debe cambiar el texto por un _input_
+    que permita editar el texto y luego guardar los cambios.
+  - [✔️]Al guardar los cambios debe cambiar de vuelta a un texto normal, pero con la
+    información editada.
+  - [✔️]Al recargar la página debo de poder ver los textos editados.
+
+### 4.2 Consideraciones técnicas Front-end
+
+* [✔️] Separar la manipulación del DOM de la lógica (Separación de responsabilidades).
+* [✔️] Contar con múltiples vistas. Para esto, tu aplicación debe ser una
+ [Single Page Application (SPA)](https://es.wikipedia.org/wiki/Single-page_application)
+* [✔️] Alterar y persistir datos. Los datos que agregues o modifiques deberán
+  persistir a lo largo de la aplicación. Te recomendamos que uses
+  [Firebase](https://firebase.google.com/) para eso también.
+
+### 4.3 Consideraciones técnicas UX
+
+* Hacer al menos 2 entrevistas con usuarios.
+* [✔️] _Hacer un prototipo de baja fidelidad._
+* [✔️] _Asegurarte de que la implementación en código siga los lineamientos del
+  diseño._
+* [✔️] _Hacer sesiones de _testing de usabilidad_ con el producto en HTML._
+
+
+
+<details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- # Creando una Red Social
 
 ## Índice
 
@@ -511,4 +686,4 @@ Otras:
 * [Mobile First: el enfoque actual del diseño web móvil - 1and1](https://www.1and1.es/digitalguide/paginas-web/diseno-web/mobile-first-la-nueva-tendencia-del-diseno-web/)
 * [Mobile First - desarrolloweb.com](https://desarrolloweb.com/articulos/mobile-first-responsive.html)
 * [Mobile First - ZURB](https://zurb.com/word/mobile-first)
-* [Mobile First Is NOT Mobile Only - Nielsen Norman Group](https://www.nngroup.com/articles/mobile-first-not-mobile-only/)
+* [Mobile First Is NOT Mobile Only - Nielsen Norman Group](https://www.nngroup.com/articles/mobile-first-not-mobile-only/) -->

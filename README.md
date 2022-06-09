@@ -59,7 +59,7 @@ Las redes sociales sitios facilitan la comunicación entre las personas, el inte
 
  
 | HISTORIA DE USUARIO 05 |
-| ----------------------- |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | NOMBRE:  | Visualizar publicación |
 | DESCRIPCIÓN: | Como usuario autor quiero: poder visualizar mi post después de haber publicado un post y de haber recargado la página para corregir o incorporar nueva información |
 | CRITERIOS DE ACEPTACIÓN: | Dado que el usuario quiere poder visualizar su post cuando termine de publicarlo entonces podrá visualizarlo en la parte inferior donde se listan los posts visualizarlo y poder editarlo.  |

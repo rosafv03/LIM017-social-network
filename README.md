@@ -11,7 +11,7 @@
 
 Las redes sociales sitios facilitan la comunicación entre las personas, el intercambio de información y permiten conocer gente nueva, ampliando aún más la  red de contactos con intereses afines. 'Cuy Viajero' es una red social con temática de Viajes, donde buscamos que los usuarios puedan registrar sus experiencias, recomendaciones o consultas sobre viajes.
 
-## 4. Definición del producto
+<!-- ## 4. Definición del producto
 
 * Los principales usuarios para ésta red Social, según una encuesta realizada a 50 personas, son:
 -
@@ -21,18 +21,18 @@ Las redes sociales sitios facilitan la comunicación entre las personas, el inte
 
 
 * Ésta red social resuelve el problemas de la mayoría de viajeros que antes de programar un viaje desean, recibir recomendaciones de lugar a adónde visitar, compartir su experiencia y opinión sobre algunos destinos, ésta red social le permitirá interactuar con más usuarios con similares intereses y así crear una comunidad de apoyo y consulta.
-
+ -->
 
 
 ## 2. Historias de usuario
-|**HISTORIA DE USUARIO 01**| |
+|  | **HISTORIA DE USUARIO 01**|
 | ---------- |----------- |
 |NOMBRE:  |  Crear cuenta de usuario|
 |DESCRIPCIÓN: | Como usuario nuevo Quiero poder crear una cuenta con nombre de usuario, email y password para poder ingresar a la red social|  
 |CRITERIOS DE ACEPTACIÓN: |  Dado que el usuario quiere crearse una cuenta cuando esté interesado en compartir información en la red social, y conocer sus beneficios entonces se creará un apartado que permita al usuario llenar sus datos de username, email, password o registrarse con su cuenta gmail. Y luego estos datos serán guardados.  |
 |DEFINICIÓN DE TERMINADO: |  El usuario ingresa satisfactoriamente sus datos de registro, el cual se usará para el ingreso a la vista de publicaciones |
 
-| **HISTORIA DE USUARIO 02** | |
+|  |**HISTORIA DE USUARIO 02**  |
 | ------------|----------- |
 |**NOMBRE:**  |  Login con usuario y contraseña|
 | **DESCRIPCIÓN:** |  Como usuario registrado quiero poder ingresar con mi correo y contraseña para poder acceder a la aplicación |
@@ -40,7 +40,7 @@ Las redes sociales sitios facilitan la comunicación entre las personas, el inte
 | DEFINICIÓN DE TERMINADO: | El usuario logra acceder a la aplicación con su usuario y contraseña registrados.   |
 
 
-| **HISTORIA DE USUARIO 03**| |
+|  |  **HISTORIA DE USUARIO 03**|
 | ----- |----- |
 | **NOMBRE:**  |  Login con Google. |
 | **DESCRIPCIÓN:** | Como usuario que cuenta con correo Gmail, quiero poder acceder a la aplicación de manera más fácil con mi correo Gmail. |
@@ -48,7 +48,7 @@ Las redes sociales sitios facilitan la comunicación entre las personas, el inte
 | **DEFINICIÓN DE TERMINADO:** | El usuario logra ingresar accediendo al botón de iniciar sesión con Google, luego de otorgar permisos, logrará acceder a la aplicación. |
 
 
-| **HISTORIA DE USUARIO 04**|  |
+|  |  **HISTORIA DE USUARIO 04**|
 | ----------- | ------------ |
 | **NOMBRE:**  |  Crear publicación  |
 | **DESCRIPCIÓN:** | Como usuario registrado quiero poder crear una publicación |
@@ -58,7 +58,7 @@ Las redes sociales sitios facilitan la comunicación entre las personas, el inte
  
 
  
-| **HISTORIA DE USUARIO 05** | | 
+|   | **HISTORIA DE USUARIO 05** | 
 | -------------|-------------|
 | **NOMBRE:**  | Visualizar publicación |
 | **DESCRIPCIÓN:** | Como usuario autor quiero: poder visualizar mi post después de haber publicado un post y de haber recargado la página para corregir o incorporar nueva información |
@@ -66,14 +66,14 @@ Las redes sociales sitios facilitan la comunicación entre las personas, el inte
 | **DEFINICIÓN DE TERMINADO:** | El usuario es capaz de visualizar de manera eficiente su post publicado. |
 
 
-| **HISTORIA DE USUARIO 06**|  |
+|  | **HISTORIA DE USUARIO 06** |
 | --------------|--------- |
 | **NOMBRE:**  |  Eliminar publicación  |
 | **DESCRIPCIÓN:** | Como usuario autor quiero eliminar las publicaciones que me pertenecen.  |
 | **CRITERIOS DE ACEPTACIÓN:** | Dado que el usuario autor, ha realizado alguna publicación previamente, se le habilitará el botón eliminar en el post publicado, al darle click, se mostrará una alerta consultando si realmente quiere eliminar el post, si el usuario autor confirma, se procederá a eliminar el post de su autoría. |
 | **DEFINICIÓN DE TERMINADO:** |  El usuario es capaz de eliminar los post de su autoría. |
 
-| **HISTORIA DE USUARIO 07**|  |
+|   |  **HISTORIA DE USUARIO 07** |
 | ------------- |---------- |
 | **NOMBRE:**  | Editar publicación |
 | **DESCRIPCIÓN:** | Como usuario autor quiero poder editar y guardar el post editado para corregir o incorporar nueva información. |
@@ -155,9 +155,6 @@ tus H.U.:
 
 <details>
 
-
-
-![p]()
 
 
 

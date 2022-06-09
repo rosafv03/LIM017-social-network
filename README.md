@@ -25,7 +25,7 @@ Las redes sociales sitios facilitan la comunicación entre las personas, el inte
 
 
 ## 2. Historias de usuario
- HISTORIA DE USUARIO 01 |
+|**HISTORIA DE USUARIO 01**|----------------------|
 | ---------- |----------- |
  NOMBRE:  |  Crear cuenta de usuario
  DESCRIPCIÓN: | Como usuario nuevo Quiero poder crear una cuenta con nombre de usuario, email y password para poder ingresar a la red social  

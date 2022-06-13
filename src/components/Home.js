@@ -60,8 +60,8 @@ export const Home = () => {
       <button data-id="${doc.id}" class='btn-Delete'${dataPost.author === localStorage.getItem('userEmail') ? '' : 'disabled'}></button>
       <button data-id="${doc.id}" class='btn-edit'${dataPost.author === localStorage.getItem('userEmail') ? '' : 'disabled'}></button>
       </div>` : '';
-      console.log(doc.id);
-      console.log(doc.data());
+      // console.log(doc.id);
+      // console.log(doc.data());
       // doc.data transforma los datos de un objeto de firebase a un objeto de javascript
       html += `
             
@@ -86,13 +86,13 @@ export const Home = () => {
     btnDelete.forEach((btn) => {
       btn.addEventListener('click', async ({ target: { dataset } }) => {
         try {
-          const confirmDelet = confirm('Estás seguro que quieres borrar?');
+          const confirmDelet = Window.confirm('Estás seguro que quieres borrar?');
           if (confirmDelet === true) {
             await deletePost(dataset.id);
           }
         } catch (error) {
-          console.log(error);
-          console.log(error);
+          // console.log(error);
+          // console.log(error);
         }
       });
     });
@@ -123,7 +123,7 @@ export const Home = () => {
       alert('Debes ingresar u texto antes de publicar');
     } else postCollection(postBox);
     viewHomePage.querySelector('#comment-post').value = '';
-    console.log(postBox);
+    // console.log(postBox);
     /* savePost.reset(); */
   });
 
@@ -138,13 +138,13 @@ export const Home = () => {
   viewHomePage.querySelector('#singOutBttn').addEventListener('click', () => {
     signOff()
       .then(() => {
-       const confirmsignOff = confirm('Estás seguro de cerrar sesión?');
+       const confirmsignOff = Window.confirm('Estás seguro de cerrar sesión?');
       if (confirmsignOff === true) {
          onNavigate('/');
       }
   })
-      .catch((error) => {
-        console.log('No pudo cerrar sesión', error);
+      .catch(() => {
+        // console.log('No pudo cerrar sesión', error);
       });
   });
   return viewHomePage;

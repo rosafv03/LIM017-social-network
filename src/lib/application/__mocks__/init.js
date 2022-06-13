@@ -8,9 +8,9 @@ export const getAuth = () => Promise.resolve({});
 export const GoogleAuthProvider = jest.fn(() => ({}));
 // export class GoogleAuthProvider {}
 
-export const createUserWithEmailAndPassword = jest.fn((auth, emailUser, passwordUser) => Promise.resolve({ user: { email: emailUser } }));
+export const createUserWithEmailAndPassword = jest.fn((auth, emailUser, passwordUser) => Promise.resolve({ user: { email: emailUser, password: passwordUser } }));
 // eslint-disable-next-line max-len
-export const signInWithEmailAndPassword = ( auth, emailUser, passwordUser) => Promise.resolve({ user: { email: emailUser } });
+export const signInWithEmailAndPassword = (auth, emailUser, passwordUser) => Promise.resolve({ user: { email: emailUser, password: passwordUser } });
 // export const signInWithEmailAndPassword = () => Promise.resolve({});
 /// / funciones relacionadas dentro de authFirebase
 export const initializeApp = () => Promise.resolve({});

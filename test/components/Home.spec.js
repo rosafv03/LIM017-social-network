@@ -1,6 +1,8 @@
+/* eslint-disable max-len */
+/* eslint-disable jest/no-focused-tests */
 // importamos la funcion que vamos a testear
 import { Home } from '../../src/components/Home.js';
-import { onNavigate } from '../../src/lib/application/controller.js';
+
 // import { signOut } from '../../src/lib/application/__mock__/init.js';
 import { signOut } from '../../src/lib/application/init.js';
 
@@ -16,15 +18,15 @@ describe('cerrar sesion', () => {
   });
 });
 
-describe('Probando botón de atrás', () => {
-  fit('debería enviarnos atrás"', (done) => {
-    // simulando contenedor en el test
-    document.body.innerHTML = '<section id="root"></section>';
-    // creando la vista que deseo a donde me lleve
-    const home = Home();
-    // eslint-disable-next-line max-len
-    // qué espero, espero que me lleve con el onNavigate a la vista Home y que sea igual a la constante 'home'
-    expect(onNavigate('/home')).toEqual(home);
-    done()
-  });
-});
+// describe('Probando botón de atrás', () => {
+//   it('debería enviarnos atrás"', (done) => {
+//     // simulando contenedor en el test
+//     document.body.innerHTML = '<section id="root"></section>';
+//     // creando la vista que deseo a donde me lleve
+//     const home = Home();
+//     // eslint-disable-next-line max-len
+//     // qué espero, espero que me lleve con el onNavigate a la vista Home y que sea igual a la constante 'home'
+//     expect(onNavigate('/home')).toEqual(home);
+//     done();
+//   });
+// });

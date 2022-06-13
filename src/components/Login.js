@@ -83,9 +83,9 @@ export const Login = () => {
     signInWithGoogle()
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log(user);
-        console.log(user.localStorage);
-        console.log(userCredential);
+        // console.log(user);
+        // // console.log(user.localStorage);
+        // console.log(userCredential);
         localStorage.setItem('userEmail', user.email);
         onNavigate('/home');
       });

@@ -1,6 +1,6 @@
+/* eslint-disable no-alert */
 // eslint-disable-next-line import/no-cycle
 import { onNavigate } from '../lib/application/controller.js';
-// eslint-disable-next-line import/no-cycle
 import { signOff } from '../lib/application/authFirebase.js';
 
 export const Profile = () => {
@@ -34,7 +34,7 @@ export const Profile = () => {
     signOff()
       .then(() => onNavigate('/'))
       .catch((error) => {
-        console.log('No pudo cerrar sesión', error);
+        alert('No pudo cerrar sesión', error);
       });
   });
   return viewProfilePage;

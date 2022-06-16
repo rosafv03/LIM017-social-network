@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 /* eslint-disable no-console */
 /* eslint-disable padded-blocks */
 /* eslint-disable indent */
@@ -14,23 +15,23 @@ export const Register = () => {
     <img class='img-responsive' src='img/cuyLog.png'>
     <p class=text-Register>Registro</p>
     <form>
-    <label for='nameUser'>Nombre de usuario
-    <input type='text' id='createName' placeholder ='Ejm: usuario' name ='nameUser'>
-    </label>
-    <label for='inputEmail'>Email
-    <input type='text' id='createEmail' placeholder ='usuario@example.com' name ='nameEmail'>
-    </label>
-    <p id='messageEmail'></p>
-    <label for='namePassword'>Contraseña
-    <input type= 'password' id='createPassword' placeholder ='Mayor a 6 carácteres' name ='namePassword'>
-    </label>
+      <label for='nameUser'>Nombre de usuario
+        <input type='text' id='createName' placeholder ='Ejm: usuario' name ='nameUser'>
+      </label>
+      <label for='inputEmail'>Email
+        <input type='text' id='createEmail' placeholder ='usuario@example.com' name ='nameEmail'>
+      </label>
+      <p id='messageEmail'></p>
+      <label for='namePassword'>Contraseña
+        <input type= 'password' id='createPassword' placeholder ='Mayor a 6 carácteres' name ='namePassword'>
+      </label>
     </form>
-    <p id='messagePassword'></p>
-    <p id='messageVerificado'></p>
-    <button id='buttonUserRegister' class='buttonHome'> Crear Ususario</button>
-    <button id='buttonGoogle'> Iniciar con <img class='logo-Google' src='img/google.png'> </button>
-    <button id='buttonBackHome' class='buttonHome' ></button>
-    </section>
+      <p id='messagePassword'></p>
+      <p id='messageVerificado'></p>
+      <button id='buttonUserRegister' class='buttonHome'> Crear Ususario</button>
+      <button id='buttonGoogle'> Iniciar con <img class='logo-Google' src='img/google.png'> </button>
+      <button id='buttonBackHome' class='buttonHome' ></button>
+  </section>
   `;
 
   const viewRegiterPage = document.createElement('div');
@@ -39,42 +40,32 @@ export const Register = () => {
 
   viewRegiterPage.querySelector('#buttonUserRegister').addEventListener('click', (e) => {
     e.preventDefault();
-    const nameValue = viewRegiterPage.querySelector('#createName');
-    console.log(nameValue);
-    const emailValue = viewRegiterPage.querySelector('#createEmail');
-    console.log(emailValue);
-    const passwordValue = viewRegiterPage.querySelector('#createPassword');
-    console.log(passwordValue);
+    const nameValue = viewRegiterPage.querySelector('#createName').value;
+    const emailValue = viewRegiterPage.querySelector('#createEmail').value;
+    const passwordValue = viewRegiterPage.querySelector('#createPassword').value;
     const messageEmail = viewRegiterPage.querySelector('#messageEmail');
     const messagePassword = viewRegiterPage.querySelector('#messagePassword');
     const messageVerificado = viewRegiterPage.querySelector('#messageVerificado');
-    // eslint-disable-next-line no-constant-condition
-    registerWithEmail(emailValue.value, passwordValue.value)
-    // eslint-disable-next-line consistent-return
+    registerWithEmail(emailValue, passwordValue)
     .then((userCredential) => {
       const user = userCredential.user;
-      console.log(user);
       return user;
     })
-    .then((user) => {
-      console.log({ user });
+    .then(() => {
         messageVerificado.innerHTML = 'Usuario creado correctamente';
-        console.log(user);
-        modiedPerfil(nameValue.value);
+        modiedPerfil(nameValue);
         console.log(modiedPerfil);
         sendEmailVerificationFirebase().then(() => {
-      // eslint-disable-next-line no-alert
       alert('Ya se envio tu correo de verificación');
     })
     .catch((err) => {
-      console.log(err.message);
+      alert(err.message);
     });
         setTimeout(() => {
           onNavigate('/login');
         }, 5000);
     }).catch((error) => {
-      console.log(error);
-      console.log(error.message);
+      alert(error);
     switch (error.message) {
       case 'Firebase: Error (auth/missing-email).': messageEmail.innerHTML = 'El correo es obligatorio'; break;
       case 'Firebase: Error (auth/invalid-email).': messageEmail.innerHTML = 'Digite un correo válido'; break;
@@ -93,6 +84,4 @@ export const Register = () => {
   viewRegiterPage.querySelector('#buttonBackHome').addEventListener('click', () => onNavigate('/'));
 
   return viewRegiterPage;
-
-// eslint-disable-next-line eol-last
 };

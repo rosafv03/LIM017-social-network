@@ -11,21 +11,21 @@ export const Login = () => {
     <img class='img-responsive' src='img/cuyLog.png'>
     <p class=text-Register>Login</p>
     <label for='nameEmail'>Email
-    <input type='text' id='loginEmail' placeholder ='Ejm:usuario@example.com' name ='nameEmail' required>
+      <input type='text' id='loginEmail' placeholder ='Ejm:usuario@example.com' name ='nameEmail' required>
     </label>
     <label for='namePassword'>Contraseña
-    <input type= 'password' id='loginPassword' placeholder ='Mayor a 6 caracteres' name ='namePassword' required>
-    <p id='messageEmail'></p>
-    <p id='messagePassword'></p>
-    <p id='errorCodeMessage'></p>
+      <input type= 'password' id='loginPassword' placeholder ='Mayor a 6 caracteres' name ='namePassword' required>
+      <p id='messageEmail'></p>
+      <p id='messagePassword'></p>
+      <p id='errorCodeMessage'></p>
     </label>
     <button id='getInto'> Iniciar sesión
     <button id='buttonGoogle'>Iniciar con <img class='logo-Google' src='img/google.png'> </button>
     <div id='register-link'>
-    <p>¿No tienes cuenta? <a href='/register'><span class='link-span'><strong>Regístrate</strong></span></a></p>
+      <p>¿No tienes cuenta? <a href='/register'><span class='link-span'><strong>Regístrate</strong></span></a></p>
     </div>
     <button id='buttonBackHome' class='buttonHome'>
-    </section>
+  </section>
   `;
   const viewLoginPage = document.createElement('div');
   viewLoginPage.innerHTML = loginPage;
@@ -33,9 +33,7 @@ export const Login = () => {
 
   viewLoginPage.querySelector('#getInto').addEventListener('click', (e) => {
     const emailValue = viewLoginPage.querySelector('#loginEmail');
-    console.log(emailValue);
     const passwordValue = viewLoginPage.querySelector('#loginPassword');
-    console.log(passwordValue);
     const errorCodeMessage = viewLoginPage.querySelector('#errorCodeMessage');
 
     const messageEmail = viewLoginPage.querySelector('#messageEmail');
@@ -49,8 +47,6 @@ export const Login = () => {
     loginUser(emailValue.value, passwordValue.value) // --------nuevos cambios--------
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log(user);
-        console.log(user.emailVerified);
         if (user.emailVerified === true) {
           onNavigate('/home');
         } else {
@@ -75,25 +71,16 @@ export const Login = () => {
           default: return errorCode;
         }
         return errorCode;
-        // onNavigate('/login');
       });
-  });// --------nuevos cambios--------
+  });
 
   viewLoginPage.querySelector('#buttonGoogle').addEventListener('click', () => {
     signInWithGoogle()
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log(user);
-        console.log(user.localStorage);
-        console.log(userCredential);
         localStorage.setItem('userEmail', user.email);
         onNavigate('/home');
       });
-    /* .then((result) => {
-        const userGmail = user.photoURL;
-        user = result.user.uid;
-        document.getElementById('iconUser').setAttribute('src', userGmail.photoURL);
-      }); */
   });
   viewLoginPage.querySelector('#buttonBackHome').addEventListener('click', () => onNavigate('/'));
   return viewLoginPage;

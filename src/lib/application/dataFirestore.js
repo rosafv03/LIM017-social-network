@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-alert */
+/* eslint-disable import/no-cycle */
 /* eslint-disable no-shadow */
 import {
   initializeApp,
@@ -12,15 +15,13 @@ import {
   orderBy,
   getDoc,
   updateDoc,
-} from './init.js'; // agregado
-// eslint-disable-next-line import/no-cycle
+} from './init.js';
+
 import { auth } from './authFirebase.js';
 import { firebaseConfig } from './config.js';
 
 export const app = initializeApp(firebaseConfig);
-/* export const getCurrentUser = () => getAuth().currentUser; */
-
-export const db = getFirestore(app); // agregado
+export const db = getFirestore(app);
 
 export const postCollection = async (postDescription) => {
   try {
@@ -34,23 +35,15 @@ export const postCollection = async (postDescription) => {
       date: new Date().toLocaleDateString('es'),
       hora: new Date().toLocaleTimeString('es'),
     });
-    console.log('Document written with ID: ', docRef.id);
   } catch (e) {
-    console.error('Error adding document: ');
+    alert('Error adding document: ', e);
   }
 };
-/* export const getPost = () => getDocs(collection(db, 'posts')); */
 
 export const deletePost = (id) => deleteDoc(doc(db, 'posts', id));
 
 export const getPostPublication = (id) => getDoc(doc(db, 'posts', id));
 
-// export const onGetPosts = () => console.log('onGetPosts'); //Cuando se traigan nuevos posts
-
-/* export const onGetPosts = onSnapshot(doc(db, 'posts'), (doc) => {
-    console.log('Data actual: ', doc.data());
-  }); */
 export const onGetPosts = (callback) => onSnapshot(query(collection(db, 'posts'), orderBy('date', 'desc')), callback);
 
-// const q = query(citiesRef, orderBy("name"), limit(3));
 export const fuctionEditPost = (id, idPost) => updateDoc(doc(db, 'posts', id), idPost);

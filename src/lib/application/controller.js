@@ -14,8 +14,7 @@ export const routes = {
   '/profile': Profile,
   '/home': Home,
 };
-/* const component = routes[window.location.pathname];
-rootDiv.appenChild(component()); */
+
 export const onNavigate = (pathname) => {
   window.history.pushState(
     {},
